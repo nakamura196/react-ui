@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "@nakamura196/react-ui"
+abstract: "Shared React UI components and UTokyo-VI-inspired design tokens for Next.js apps."
+authors:
+  - family-names: Nakamura
+    given-names: Satoru
+    orcid: https://orcid.org/0000-0001-8245-7925
+    website: https://researchmap.jp/nakamura.satoru?lang=en
+repository-code: https://github.com/nakamura196/react-ui
+license: MIT

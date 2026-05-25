@@ -1,0 +1,67 @@
+/*
+ * @nakamura196/react-ui — design tokens
+ * 東京大学 Visual Identity Guidelines (2024-06) の配色・書体に倣う。
+ * 方向性は "Structured"(青+黄を差し色、白黒を基調=知的)。ロゴ/シンボルマークは不使用。
+ *
+ * 使い方(各アプリ):
+ *   1) グローバルCSSで `@import '@nakamura196/react-ui/styles.css';`
+ *   2) Tailwind v4 に DS のソースを走査させる:
+ *        @source '../../node_modules/@nakamura196/react-ui/src';
+ *   3) Noto Sans JP / Noto Serif JP を読み込み、--ds-font-* を上書き(任意・推奨)
+ */
+
+:root {
+  /* --- UTokyo brand (raw) --- */
+  --ds-blue: #0b8bee; /* UTokyo Blue (PANTONE 2194C) */
+  --ds-yellow: #ffcd00; /* UTokyo Yellow (PANTONE 116C) */
+
+  /* UTokyo Blue tonal scale (p.28) */
+  --ds-blue-50: #e7f3fd;
+  --ds-blue-100: #cee8fc;
+  --ds-blue-200: #b6dcfa;
+  --ds-blue-300: #9dd1f8;
+  --ds-blue-400: #6db9f5;
+  --ds-blue-500: #3ca2f1;
+  --ds-blue-600: #0b8bee;
+  --ds-blue-700: #096fbe;
+  --ds-blue-800: #07538f;
+  --ds-blue-900: #04385f;
+  --ds-blue-950: #021c30;
+
+  /* --- semantic (light) --- */
+  --ds-bg: #ffffff;
+  --ds-surface: #f7f9fb;
+  --ds-surface-2: #eef2f7;
+  --ds-border: #e2e8f0;
+  --ds-fg: #1a1a1a;
+  --ds-fg-muted: #51607a;
+  --ds-primary: var(--ds-blue);
+  --ds-primary-hover: #096fbe;
+  --ds-primary-fg: #ffffff;
+  --ds-accent: var(--ds-yellow);
+  --ds-ring: #3ca2f1;
+
+  /* --- typography --- */
+  /* アプリが next/font で Noto を読み込み、これらを上書きするのを推奨 */
+  --ds-font-sans: "Noto Sans JP", ui-sans-serif, system-ui, -apple-system,
+    "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --ds-font-serif: "Noto Serif JP", ui-serif, Georgia, "Hiragino Mincho ProN",
+    "Yu Mincho", serif;
+
+  --ds-radius: 0.5rem;
+}
+
+.dark {
+  /* ダークは UTokyo の濃青を基調(p.13 の dark 背景) */
+  --ds-bg: #010e18;
+  --ds-surface: #021c30;
+  --ds-surface-2: #032a47;
+  --ds-border: #04385f;
+  --ds-fg: #e7f3fd;
+  --ds-fg-muted: #9dd1f8;
+  --ds-primary: #3ca2f1;
+  --ds-primary-hover: #6db9f5;
+  --ds-primary-fg: #010e18;
+  --ds-accent: #ffd733;
+  --ds-ring: #6db9f5;
+}
