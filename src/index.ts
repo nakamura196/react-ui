@@ -22,4 +22,7 @@ export type { VideoEmbedProps } from "./components/VideoEmbed";
 export { Button, buttonClass } from "./components/Button";
 export type { ButtonProps, ButtonVariant, ButtonSize } from "./components/Button";
 
+export { Prose, MarkdownContent, proseClass } from "./components/Prose";
+export type { MarkdownContentProps } from "./components/Prose";
+
 export type { LinkLike } from "./components/types";
