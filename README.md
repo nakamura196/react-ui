@@ -107,6 +107,57 @@ import { Link, useRouter, usePathname } from "@/i18n/routing"; // next-intl
 />
 ```
 
+## 静的サイト(素の HTML)で使う
+
+React/Next.js を使わないページ(GitHub Pages の `docs/index.html` 等)向けに、
+`src/styles/static.css` と `src/snippets/*.html` を同梱している。jsDelivr 経由で
+`<link>` 1 本読み込めば、トークン・Noto フォント・Header/Footer/Button/Input/Card・
+DataTables テーマが全て使える。React 版コンポーネントと同じ見た目になる。
+
+```html
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/nakamura196/react-ui@v0.4.0/src/styles/static.css">
+  </head>
+  <body>
+    <header class="ds-header">
+      <div class="ds-header__inner">
+        <a class="ds-header__brand" href="/">SITE TITLE</a>
+        <nav class="ds-header__nav">
+          <a class="ds-header__nav-link" href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="ds-container ds-section">
+      <h1 class="ds-h1">タイトル</h1>
+      <button class="ds-btn">Load</button>
+    </main>
+
+    <footer class="ds-footer"> ... </footer>
+  </body>
+</html>
+```
+
+スニペット雛形は `src/snippets/header.html` / `footer.html` / `page-shell.html`。
+カラーモードは `<html class="dark">` で強制ダーク、`<html class="light">` で強制ライト、
+何も付けなければ `prefers-color-scheme` に追従する。
+
+提供している CSS クラス:
+
+| 用途 | クラス |
+|---|---|
+| レイアウト | `.ds-container` `.ds-section` `.ds-stack` |
+| 見出し | `.ds-h1` `.ds-h2` `.ds-lead` |
+| ヘッダー | `.ds-header` `.ds-header__inner` `.ds-header__brand` `.ds-header__nav` `.ds-header__nav-link` `.ds-header__actions` |
+| フッター | `.ds-footer` `.ds-footer__inner` `.ds-footer__grid` `.ds-footer__col` `.ds-footer__brand` `.ds-footer__brand-desc` `.ds-footer__heading` `.ds-footer__list` `.ds-footer__link` `.ds-footer__copyright` |
+| フォーム | `.ds-field` `.ds-label` `.ds-input` `.ds-btn` (+ `--secondary` `--sm` `--lg`) |
+| カード | `.ds-card` `.ds-card__title` |
+| テーブル | `.ds-table-wrap`(内側に jQuery DataTables を置くと自動でテーマ適用) |
+
 ## リリース手順（メンテナ）
 
 1. 変更をコミット

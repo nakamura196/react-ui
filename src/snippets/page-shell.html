@@ -1,0 +1,56 @@
+<!doctype html>
+<!--
+  @nakamura196/react-ui — 静的ページの雛形
+  ----------------------------------------
+  <link rel="stylesheet"> 1 本でデザインシステム(配色 / フォント / 主要パーツ)が
+  反映される最小構成。React/Next.js を使わない素の HTML ページ用。
+-->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>サイト名</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/nakamura196/react-ui@v0.4.0/src/styles/static.css"
+    />
+  </head>
+  <body>
+    <header class="ds-header">
+      <div class="ds-header__inner">
+        <a class="ds-header__brand" href="/">SITE TITLE</a>
+        <nav class="ds-header__nav">
+          <a class="ds-header__nav-link" href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="ds-container ds-section">
+      <h1 class="ds-h1">見出し</h1>
+      <p class="ds-lead">サイトの導入文。</p>
+
+      <div class="ds-card">
+        <h2 class="ds-card__title">カード見出し</h2>
+        <p>カード内容。</p>
+      </div>
+    </main>
+
+    <footer class="ds-footer">
+      <div class="ds-footer__inner">
+        <div class="ds-footer__grid">
+          <div>
+            <p class="ds-footer__brand">SITE TITLE</p>
+            <p class="ds-footer__brand-desc">説明文。</p>
+          </div>
+          <div class="ds-footer__col">
+            <h2 class="ds-footer__heading">サイト案内</h2>
+            <ul class="ds-footer__list">
+              <li><a class="ds-footer__link" href="/">ホーム</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ds-footer__copyright">© 2026 SITE TITLE</div>
+      </div>
+    </footer>
+  </body>
+</html>

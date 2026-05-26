@@ -1,0 +1,41 @@
+<!--
+  @nakamura196/react-ui — Footer スニペット
+  ------------------------------------------
+  React 版 Footer.tsx と同等。
+  リンク列 (.ds-footer__col) は 1〜3 個まで増減可能。
+  列数に応じて .ds-footer__grid が自動で 2〜4 列にレイアウトする(:has() ベース)。
+-->
+<footer class="ds-footer">
+  <div class="ds-footer__inner">
+    <div class="ds-footer__grid">
+      <!-- 1列目: サイト名 + 説明 -->
+      <div>
+        <p class="ds-footer__brand">SITE TITLE</p>
+        <p class="ds-footer__brand-desc">
+          サイトの簡単な説明文をここに。1〜2 文程度。
+        </p>
+      </div>
+
+      <!-- 2列目以降: 任意のリンク列(1〜3 列まで) -->
+      <div class="ds-footer__col">
+        <h2 class="ds-footer__heading">サイト案内</h2>
+        <ul class="ds-footer__list">
+          <li><a class="ds-footer__link" href="/">ホーム</a></li>
+          <li><a class="ds-footer__link" href="/about">About</a></li>
+        </ul>
+      </div>
+
+      <div class="ds-footer__col">
+        <h2 class="ds-footer__heading">関連リンク</h2>
+        <ul class="ds-footer__list">
+          <li>
+            <a class="ds-footer__link" href="https://github.com/owner/repo"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ds-footer__copyright">© 2026 SITE TITLE</div>
+  </div>
+</footer>

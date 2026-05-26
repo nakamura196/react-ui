@@ -1,6 +1,6 @@
 {
   "name": "@nakamura196/react-ui",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Shared React UI components and UTokyo-VI-inspired design tokens for nakamura196's Next.js apps",
   "license": "MIT",
   "type": "module",
@@ -12,7 +12,8 @@
   ],
   "exports": {
     ".": "./src/index.ts",
-    "./styles.css": "./src/styles/tokens.css"
+    "./styles.css": "./src/styles/tokens.css",
+    "./static.css": "./src/styles/static.css"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"

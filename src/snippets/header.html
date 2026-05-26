@@ -1,0 +1,21 @@
+<!--
+  @nakamura196/react-ui — Header スニペット
+  ------------------------------------------
+  React 版 Header.tsx と同じ見た目を素の HTML で表現したもの。
+  ナビ項目 (.ds-header__nav-link) は必要な数だけ複製 / 削除する。
+  右側の actions スロットには ThemeToggle / LanguageSwitcher 相当のボタン等を入れる。
+-->
+<header class="ds-header">
+  <div class="ds-header__inner">
+    <a class="ds-header__brand" href="/">SITE TITLE</a>
+    <div class="ds-header__actions">
+      <nav class="ds-header__nav">
+        <a class="ds-header__nav-link" href="/about">About</a>
+        <a class="ds-header__nav-link" href="/docs">Docs</a>
+        <a class="ds-header__nav-link" href="https://github.com/owner/repo"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <!-- ここに任意のアクション(言語切替/テーマ切替ボタン等)を置く -->
+    </div>
+  </div>
+</header>
