@@ -1,6 +1,6 @@
 {
   "name": "@nakamura196/react-ui",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Shared React UI components and UTokyo-VI-inspired design tokens for nakamura196's Next.js apps",
   "license": "MIT",
   "type": "module",
